@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+    int t, a[25], b[25], d;
+    int f = 4, o = 3, e = 5;
+
+    scanf("%d", &t);
+
+    // আগে সব input নেওয়া
+    for(int i = 1; i <= t; i++){
+        scanf("%d %d", &a[i], &b[i]);
+    }
+
+    // পরে সব output দেওয়া
+    for(int i = 1; i <= t; i++){
+        d = abs(b[i] - a[i]);
+
+        printf("Case %d: %d\n", i, f*d + o + e + o + f*a[i] + o + e);
+    }
+
+    return 0;
+}
